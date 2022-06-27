@@ -35,3 +35,17 @@ const myLibrary = new Library();
 
 /****************** end datatypes ********************/
 
+function createCard(){
+    const newSquare = document.createElement("div");
+    newSquare.classList.add("card");
+    return newSquare;
+}
+
+function tempAddCards(){
+    let libarry = document.querySelector(".library-content");
+    for(let i = 0; i<20; i++){
+        libarry.appendChild(createCard());
+    }
+}
+
+tempAddCards();

@@ -1,0 +1,21 @@
+h1 {
+    width: 100vw;
+    height: 10vh;
+    background-color: #888888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.library-content {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    width: 15vw;
+    height: 25vh;
+    background-color:#666666;
+}
