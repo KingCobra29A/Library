@@ -1,21 +1,65 @@
-h1 {
-    width: 100vw;
-    height: 10vh;
-    background-color: #888888;
+
+.body-wrapper {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    display: flex;
+}
+
+header > h1 {
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+}
+
+header > div {
+    width: 20%;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+header > div > h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.grey-bar {
+    background-color: #666666;
+    height: 15px;
+    width: 100%;
+}
+
+.library-content {
+    margin: 15px auto 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;  
+}
+
+.card {
+    width: 30%;
+    height: 25vh;
+    background-color:#666666;
+}
+
+.btn {
+    background-color: aqua;
+    width: 5vw;
+    height:5vw;
+    border-radius: 2.5vw;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.library-content {
-    margin: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.card {
-    width: 15vw;
-    height: 25vh;
-    background-color:#666666;
+.fixed-position {
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
 }
