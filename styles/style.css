@@ -9,10 +9,13 @@ header{
     display: flex;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 header > h1 {
     width: 80%;
     text-align: center;
-    font-size: 2rem;
     margin: auto;
 }
 
@@ -31,6 +34,7 @@ header > div > h2 {
     background-color: #666666;
     height: 15px;
     width: 100%;
+    margin: 15px;
 }
 
 .library-content {
@@ -42,9 +46,15 @@ header > div > h2 {
 }
 
 .card {
-    width: 30%;
-    height: 25vh;
+    min-width: 20%;
+    max-width: 50%;
+    min-height: 20vh;
     background-color:#666666;
+    border-radius: 5px;
+}
+
+.card > h1, .card > h2 {
+    margin: 20px;
 }
 
 .btn {
