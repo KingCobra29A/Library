@@ -42,6 +42,25 @@
 
         <div class="btn fixed-position">+</div>
 
+        <div class="new-book-modal">
+            <form class="modal-content" onsubmit="submitModal(); return false;">
+                <p>
+                    <label for="book-title">Title:</label>
+                    <input type="text" id="book-title" name="book-title">
+                </p>
+                <p>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author">
+                </p>
+                <p>
+                    <label for="num-pages"># of Pages:</label>
+                    <input type="number" id="num-pages" name="num-pages">
+                </p>
+                <p>
+                    <input type="submit">
+                </p>
+            </form>
+        </div>
     </div>
     
 </body>
