@@ -41,6 +41,7 @@ class Library{
         for(i=0; i < this.books.length; i++){
             
             let card = document.createElement("div");
+            let btn = document.createElement("button");
             let cardTitle = document.createElement("H1");
             let cardTitleContent = document.createTextNode(this.books[i].title);
             let cardAuthor = document.createElement("H2");
@@ -48,12 +49,15 @@ class Library{
             let cardNumPages = document.createElement("H2");
             let cardNumPagesContent = document.createTextNode("Number of Pages: " +  this.books[i].numPages.toString());
 
+            btn.innerHTML = "x";
             cardTitle.appendChild(cardTitleContent);
             cardAuthor.appendChild(cardAuthorContent);
             cardNumPages.appendChild(cardNumPagesContent);
+            card.appendChild(btn);
             card.appendChild(cardTitle);
             card.appendChild(cardAuthor);
             card.appendChild(cardNumPages);
+            btn.classList.add("remove-btn");
             card.classList.add("card");
             libarry.appendChild(card);           
         }

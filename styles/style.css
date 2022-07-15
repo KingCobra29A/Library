@@ -57,6 +57,20 @@ header > div > h2 {
     margin: 20px;
 }
 
+.remove-btn {
+    float: right;
+    margin: 10px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    height: 1.2rem;
+    width: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 0px;
+}
+
 .btn {
     background-color: aqua;
     width: 5vw;
