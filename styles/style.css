@@ -30,6 +30,10 @@ header > div > h2 {
     font-size: 1.5rem;
 }
 
+h3 {
+    display: inline-block;
+}
+
 .grey-bar {
     background-color: #666666;
     height: 15px;

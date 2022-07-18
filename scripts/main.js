@@ -14,6 +14,7 @@ class Book{
 class Library{
     constructor(){
         this.books = [];
+        this.booksRead = 0;
     }
 
     addBook(newBook){
@@ -74,6 +75,8 @@ class Library{
                 this.removeBook(e.target.parentNode.dataset.index);
             })
         }
+
+        bookCountSelector.textContent = this.books.length;
         
     }
 }
@@ -94,6 +97,7 @@ const titleSelector = document.querySelector("#book-title");
 const authorSelector = document.querySelector("#author");
 const numPagesSelector = document.querySelector("#num-pages");
 let libarry = document.querySelector(".library-content");
+let bookCountSelector = document.querySelector("#book-count");
 
 /****************** end DOM selectors ***************************/
 
