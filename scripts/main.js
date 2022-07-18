@@ -6,6 +6,7 @@ class Book{
         this.author = author;
         this.numPages = numPages;
         this.isRead = isRead;
+        this.index = 0;
     }
 
 }
@@ -22,8 +23,9 @@ class Library{
         this.displayLibrary();
     }
 
-    removeBook(){
-        //add implementation
+    removeBook(index){
+        this.books.splice(index, 1);
+        this.displayLibrary();
     }
 
     queryBook(newBook){
@@ -39,6 +41,9 @@ class Library{
 
 
         for(i=0; i < this.books.length; i++){
+
+            //set book index for mapping between book and dom element
+            this.index = i;
             
             let card = document.createElement("div");
             let btn = document.createElement("button");
@@ -48,6 +53,9 @@ class Library{
             let cardAuthorContent = document.createTextNode("By: " + this.books[i].author);
             let cardNumPages = document.createElement("H2");
             let cardNumPagesContent = document.createTextNode("Number of Pages: " +  this.books[i].numPages.toString());
+
+            //set card index for mattping between book and dom element
+            card.dataset.index = i;
 
             btn.innerHTML = "x";
             cardTitle.appendChild(cardTitleContent);
@@ -59,7 +67,12 @@ class Library{
             card.appendChild(cardNumPages);
             btn.classList.add("remove-btn");
             card.classList.add("card");
-            libarry.appendChild(card);           
+            libarry.appendChild(card);
+            
+            //add event listener to remove book when "x" is clicked on by user
+            btn.addEventListener('click', e=>{
+                this.removeBook(e.target.parentNode.dataset.index);
+            })
         }
         
     }
@@ -111,10 +124,4 @@ function submitModal(){
 
     myLibrary.addBook(new Book(title, author, numPages, "no"));
     console.log(myLibrary);
-}
-
-function createCard(inputBook){
-    const newSquare = document.createElement('template');
-    newSquare.classList.add("card");
-    return newSquare;
 }
